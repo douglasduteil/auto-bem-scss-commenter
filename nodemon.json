@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    ".git", "node_modules", "bower_components",".sass-cache",
+    ".idea", "lib"
+  ],
+  "exec":  "npm test",
+  "watch": ["src", "test"],
+  "ext": "js scss"
+}

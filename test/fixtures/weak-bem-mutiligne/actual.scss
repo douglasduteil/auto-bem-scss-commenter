@@ -1,0 +1,14 @@
+
+.foo {
+  &--active,
+  &:active{
+  }
+
+  &--bar{}
+
+  &--active,
+  &:active{}
+
+  &--bar{}
+}
+

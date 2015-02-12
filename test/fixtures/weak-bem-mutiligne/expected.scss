@@ -1,0 +1,17 @@
+// foo
+.foo {
+  // foo--active
+  &--active,
+  &:active{
+  }
+
+  // foo--bar
+  &--bar{}
+
+  // foo--active
+  &--active,
+  &:active{}
+
+  // foo--bar
+  &--bar{}
+}

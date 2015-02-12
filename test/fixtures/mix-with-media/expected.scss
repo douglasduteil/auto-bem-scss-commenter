@@ -1,0 +1,41 @@
+// foo
+.foo {
+
+  @media screen {
+  }
+
+  // foo__bar
+  &__bar {
+  }
+
+}
+
+// foo
+.foo {
+
+  @media screen {}
+
+  // foo__bar
+  &__bar {}
+
+  @media screen {}
+
+  // foo__bar
+  &__bar {}
+
+  @media screen {}
+
+}
+
+// foo
+.foo {
+
+  // foo__bar
+  &__bar {}
+
+  @media screen {}
+
+
+  // foo__bar
+  &__bar {}
+}

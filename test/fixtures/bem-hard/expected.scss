@@ -1,0 +1,54 @@
+// foo
+.foo {
+  // foo__bar
+  &__bar {
+
+    // oof
+    .oof {
+      // oof__rab
+      &__rab {}
+    }
+
+  }
+
+  // foo__qux
+  &__qux {}
+}
+
+// bar
+.bar {
+
+  // bar__foo
+  &__foo {
+    // oof
+    .oof {
+      // oof__rab
+      &__rab {}}
+  }
+
+  // bar__qux
+  &__qux {}
+}
+
+// qux
+.qux {
+  & + & {}
+
+  // qux--foo
+  &--foo {
+    > {
+      #{ceil()} {
+      }
+    }
+  }
+
+  // qux__bar
+  &__bar{
+
+    &:not(:last-child) {}
+
+  }
+
+  // qux__xuq
+  &__xuq {}
+}

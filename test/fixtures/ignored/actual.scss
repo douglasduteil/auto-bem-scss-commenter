@@ -1,0 +1,40 @@
+*{}
+E{}
+E F{}
+E > F{}
+E:first-child{}
+E:lang(c){}
+E + F{}
+E[foo]{}
+E[foo="warning"]{}
+DIV.warning{}
+E#myid{}
+
+// not classes only
+
+.E.F{}
+.E > .F{}
+.E:first-child{}
+.E[foo]{}
+.E#id {}
+
+@media screen {}
+
+.E{} .F{}
+
+// SCSS operations
+> {}
+>:after {}
+& {}
+&:before {}
+&--:before {}
+&__:before {}
++ {}
+~ {}
+
+%hidden {
+  &--ber{
+  }
+}
+
+&:not(:last-child) {}

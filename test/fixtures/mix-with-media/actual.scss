@@ -1,0 +1,33 @@
+.foo {
+
+  @media screen {
+  }
+
+  &__bar {
+  }
+
+}
+
+.foo {
+
+  @media screen {}
+
+  &__bar {}
+
+  @media screen {}
+
+  &__bar {}
+
+  @media screen {}
+
+}
+
+.foo {
+
+  &__bar {}
+
+  @media screen {}
+
+
+  &__bar {}
+}
