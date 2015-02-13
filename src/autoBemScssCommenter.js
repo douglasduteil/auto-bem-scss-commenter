@@ -3,7 +3,7 @@
 import throught from 'through2';
 import assert from 'assert';
 
-const IS_CLASS_LINE_REG = /^(\s*)(\.|&)([^\s{:,]+)/;
+const IS_CLASS_LINE_REG = /^(\s*)([\.|&|%])([^\s{:,]+)/;
 const IS_A_COMPLICATE_LINE_REG = new RegExp('^\\s*' +    // "indentation"
   '(:?' +
   '(\\.|&)(?:--)?(?:__)?' +    // "start with a . or &-- or &__"
@@ -72,7 +72,10 @@ export default function autoBemScssCommenter(options) {
         function (match, selectorIndentation, selectorStartingCharacter, selectorName) {
           isReferencingParentSelectors |= selectorStartingCharacter === '&';
           indentation = selectorIndentation;
-          name = selectorName;
+          name += selectorStartingCharacter === '%'
+            ? selectorStartingCharacter
+            : '';
+          name += selectorName;
         }
       );
     }
@@ -87,9 +90,6 @@ export default function autoBemScssCommenter(options) {
         stack.push([name]);
         lastSubStack++;
       }
-      //console.log(line)
-      //console.log(stack)
-
     }
 
     function testAlreadyCommented() {
